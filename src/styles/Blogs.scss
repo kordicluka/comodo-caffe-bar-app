@@ -1,0 +1,133 @@
+@import "../App.scss";
+
+.blogs {
+  height: 85.5vh;
+  .blogs-top {
+    background-color: $primary-color;
+    padding: 1rem;
+    @include flex(column, flex-start, flex-start);
+    gap: 1rem;
+    width: 100%;
+
+    .blogs-top-header {
+      @include flex(row, center, center);
+      width: 100%;
+      position: relative;
+
+      a {
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        text-decoration: none;
+        color: $white;
+        @include flex(row, center, center);
+        gap: 0.3rem;
+
+        svg {
+          height: 1.1rem;
+          width: 1.1rem;
+          color: $gray-2;
+        }
+
+        span {
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: $white;
+          height: 100%;
+        }
+      }
+
+      h1 {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+
+    .search-bar {
+      background-color: rgba($color: $white, $alpha: 0.3);
+      border: 0.12rem solid rgba($color: $white, $alpha: 0.3);
+      @include flex(row, center, center);
+      border-radius: 0.1rem;
+      padding: 0.5rem;
+      gap: 0.5rem;
+      width: 100%;
+      height: 2.5rem;
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $white;
+        padding: 0.1rem 0.5rem;
+
+        &::placeholder {
+          color: $white;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: $white;
+      }
+    }
+
+    .search-bar {
+      background-color: rgba($color: $white, $alpha: 0.3);
+      border: 0.12rem solid rgba($color: $white, $alpha: 0.3);
+      @include flex(row, center, center);
+      border-radius: 0.1rem;
+      padding: 0.5rem;
+      gap: 0.5rem;
+      width: 100%;
+      height: 2.5rem;
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $white;
+        padding: 0.1rem 0.5rem;
+
+        &::placeholder {
+          color: $white;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: $white;
+      }
+    }
+  }
+
+  .blogs-container {
+    @include flex(row, flex-start, flex-start);
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 10vh;
+    flex-wrap: wrap;
+
+    .blogs-row {
+      @include flex(row, flex-start, flex-start);
+      gap: 1rem;
+      width: 100%;
+    }
+  }
+}

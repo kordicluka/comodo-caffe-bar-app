@@ -1,0 +1,53 @@
+@import "../App.scss";
+
+.blog-card {
+  @include flex(column, flex-start, flex-start);
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  max-width: 600px;
+  flex-grow: 1;
+  .image-container {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    padding: 1rem;
+    @include flex(column, flex-start, flex-start);
+    gap: 0.7rem;
+    background-color: $white;
+    transform: translateY(-2rem);
+    width: 80%;
+
+    h4 {
+      color: $black;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: $gray-13;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .blog-card-content-date {
+      @include flex(row, flex-start, center);
+      gap: 0.5rem;
+      width: 100%;
+
+      span {
+        color: $black;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

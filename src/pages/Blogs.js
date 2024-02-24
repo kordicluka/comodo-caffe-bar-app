@@ -1,0 +1,180 @@
+import React, { useState } from "react";
+import BlogCard from "../components/BlogCard";
+import { Link } from "react-router-dom";
+import Blog from "./Blog";
+import "../styles/Blogs.scss";
+
+const Blogs = () => {
+  const [blogs, setBlogs] = useState([
+    {
+      title: "Najava kviza 25.2.2024. u Comodo Bar-u.",
+      shortDescription: "Kliknite za prijavu na kviz!",
+      content: "<p>This is the content for blog 1</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: [
+        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708798355/Screenshot_2024-02-24_191216_urfwwc.png",
+      ],
+      slug: "najava-kviza-25-2-2024",
+    },
+    {
+      title: "Održan kviz Bitangi i Princeza 18.2.2024. u Comodo Bar-u.",
+      shortDescription: "Pogledajte kako je bilo na kvizu!",
+      content: "<p>This is the content for blog 1</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: [
+        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708798122/Screenshot_2024-02-24_190751_tlwv1m.png",
+        "https://www.gracin.hr/wp-content/uploads/2022/12/4.png",
+        "https://www.gracin.hr/wp-content/uploads/2022/12/1.png",
+      ],
+      slug: "odrzan-kviz-bitangi-i-princeza-18-2-2024",
+    },
+    {
+      title: "Inquizicija kviz 15.2.2024. u Comodo Bar-u.",
+      shortDescription: "Kliknite za prijavu na kviz!",
+      content: "<p>This is the content for blog 2</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/4.png"],
+      slug: "inquizicija-kviz-15-2-2024",
+    },
+    {
+      title: "Proslava rođendana u Comodo Bar-u.",
+      shortDescription:
+        "Pogledajte kako izgleada proslava rođendana u Comodo Bar-u!",
+      content: "<p>This is the content for blog 3</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/1.png"],
+      slug: "proslava-rodendana-2-11-2024",
+    },
+    {
+      title: "Inquizicija kviz 15.2.2024. u Comodo Bar-u.",
+      shortDescription: "Kliknite za prijavu na kviz!",
+      content: "<p>This is the content for blog 2</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/4.png"],
+      slug: "inquizicija-kviz-15-2-2024",
+    },
+    {
+      title: "Proslava rođendana u Comodo Bar-u.",
+      shortDescription:
+        "Pogledajte kako izgleada proslava rođendana u Comodo Bar-u!",
+      content: "<p>This is the content for blog 3</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/1.png"],
+      slug: "proslava-rodendana-2-11-2024",
+    },
+    {
+      title: "Inquizicija kviz 15.2.2024. u Comodo Bar-u.",
+      shortDescription: "Kliknite za prijavu na kviz!",
+      content: "<p>This is the content for blog 2</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/4.png"],
+      slug: "inquizicija-kviz-15-2-2024",
+    },
+    {
+      title: "Proslava rođendana u Comodo Bar-u.",
+      shortDescription:
+        "Pogledajte kako izgleada proslava rođendana u Comodo Bar-u!",
+      content: "<p>This is the content for blog 3</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/1.png"],
+      slug: "proslava-rodendana-2-11-2024",
+    },
+    {
+      title: "Inquizicija kviz 15.2.2024. u Comodo Bar-u.",
+      shortDescription: "Kliknite za prijavu na kviz!",
+      content: "<p>This is the content for blog 2</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/4.png"],
+      slug: "inquizicija-kviz-15-2-2024",
+    },
+    {
+      title: "Proslava rođendana u Comodo Bar-u.",
+      shortDescription:
+        "Pogledajte kako izgleada proslava rođendana u Comodo Bar-u!",
+      content: "<p>This is the content for blog 3</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/1.png"],
+      slug: "proslava-rodendana-2-11-2024",
+    },
+    {
+      title: "Inquizicija kviz 15.2.2024. u Comodo Bar-u.",
+      shortDescription: "Kliknite za prijavu na kviz!",
+      content: "<p>This is the content for blog 2</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/4.png"],
+      slug: "inquizicija-kviz-15-2-2024",
+    },
+    {
+      title: "Proslava rođendana u Comodo Bar-u.",
+      shortDescription:
+        "Pogledajte kako izgleada proslava rođendana u Comodo Bar-u!",
+      content: "<p>This is the content for blog 3</p>",
+      dateStart: "15.02.2024.",
+      dateEnd: "15.02.2024.",
+      images: ["https://www.gracin.hr/wp-content/uploads/2022/12/1.png"],
+      slug: "proslava-rodendana-2-11-2024",
+    },
+  ]);
+
+  return (
+    <div className="page blogs">
+      <div className="blogs-top">
+        <div className="blogs-top-header">
+          <Link to="/blogs">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+              />
+            </svg>
+            <span>Povratak</span>{" "}
+          </Link>
+          <h1>Događanja</h1>
+        </div>
+        <div className="search-bar">
+          <input type="text" placeholder="Pretraži događanja" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div className="blogs-container">
+        {blogs.map((blog, index) => (
+          <BlogCard blog={blog} index={index} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Blogs;
