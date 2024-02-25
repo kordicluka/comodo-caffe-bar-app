@@ -1,0 +1,159 @@
+@import "../App.scss";
+
+.blog {
+  @include flex(column, flex-start, flex-start);
+
+  .blog-top {
+    background-color: $primary-color;
+    padding: 1rem;
+    @include flex(column, flex-start, flex-start);
+    gap: 1rem;
+    width: 100%;
+
+    .blog-top-header {
+      @include flex(row, center, center);
+      width: 100%;
+      position: relative;
+
+      a {
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        text-decoration: none;
+        color: $white;
+        @include flex(row, center, center);
+        gap: 0.3rem;
+
+        svg {
+          height: 1.1rem;
+          width: 1.1rem;
+          color: $gray-2;
+        }
+
+        span {
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: $white;
+          height: 100%;
+        }
+      }
+
+      h1 {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+
+    .search-bar {
+      background-color: rgba($color: $white, $alpha: 0.3);
+      border: 0.12rem solid rgba($color: $white, $alpha: 0.3);
+      @include flex(row, center, center);
+      border-radius: 0.1rem;
+      gap: 0.5rem;
+      width: 100%;
+      height: 2.5rem;
+      position: relative;
+      padding: 0;
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $white;
+        padding: 0.1rem 0.5rem;
+
+        &::placeholder {
+          color: rgba($color: $white, $alpha: 0.8);
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: $white;
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .blog-content {
+    @include flex(column, flex-start, flex-start);
+    gap: 1rem;
+
+    .blog-content-image {
+      width: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .blog-content-image-arrow-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba($color: $black, $alpha: 0.5);
+        border: none;
+        padding: 0.5rem;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        z-index: 1;
+        cursor: pointer;
+        @include flex(row, center, center);
+
+        svg {
+          height: 1.5rem;
+          width: 1.5rem;
+          color: rgba($color: $white, $alpha: 0.8);
+        }
+
+        &.prev {
+          left: 0.5rem;
+        }
+
+        &.next {
+          right: 0.5rem;
+        }
+      }
+    }
+
+    .blog-content-text {
+      padding: 1rem;
+      @include flex(column, flex-start, flex-start);
+      gap: 1rem;
+      width: 100%;
+
+      h1 {
+        color: $black;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .blog-content-text-date {
+        @include flex(row, flex-start, center);
+        gap: 0.5rem;
+        width: 100%;
+
+        span {
+          color: $black;
+          font-size: 0.95rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -88,6 +88,21 @@ const Blogs = () => {
     return false;
   };
 
+  const getSearchTitle = (title) => {
+    if (search === "") {
+      return <h4>{title}</h4>;
+    } else {
+      let titleArray = title.split(search);
+      return (
+        <h4>
+          {titleArray[0]}
+          <span className="searched">{search}</span>
+          {titleArray[1]}
+        </h4>
+      );
+    }
+  };
+
   return (
     <div className="page blogs">
       <div className="blogs-top">
@@ -136,7 +151,13 @@ const Blogs = () => {
       <div className="blogs-container">
         {blogs.map((blog, index) => {
           if (checkSearch(blog.title)) {
-            return <BlogCard blog={blog} index={index} />;
+            return (
+              <BlogCard
+                blog={blog}
+                index={index}
+                searchTitle={getSearchTitle}
+              />
+            );
           }
         })}
       </div>
