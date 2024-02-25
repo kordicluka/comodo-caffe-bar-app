@@ -11,6 +11,7 @@ import Gallery from "./pages/Gallery";
 import Blogs from "./pages/Blogs";
 import Blog from "./pages/Blog";
 import SocialBar from "./components/SocialBar";
+import AppLoading from "./pages/AppLoading";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Navbar />
         <SocialBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<AppLoading />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/menu/:category" element={<Category />} />
           <Route path="/menu/:drink" element={<Drink />} />

@@ -1,41 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Gallery.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import image1 from "../assets/images/gallery-1.jpg";
+import image2 from "../assets/images/gallery-2.jpg";
+import image3 from "../assets/images/gallery-3.jpg";
+import image4 from "../assets/images/gallery-4.jpg";
+import image5 from "../assets/images/gallery-5.jpg";
 
 const Gallery = () => {
-  // Initial state now includes a loading state for each image
   const [images, setImages] = useState([
-    {
-      url: "http://parkandshopapi.lukakordic.me/uploads/images-1689925088761-440540587.jpg",
-      isLoading: true,
-    },
-    {
-      url: "http://parkandshopapi.lukakordic.me/uploads/images-1697553719118-588263583.jpg",
-      isLoading: true,
-    },
-    {
-      url: "http://parkandshopapi.lukakordic.me/uploads/images-1697553719239-234854138.jpg",
-      isLoading: true,
-    },
-    {
-      url: "http://parkandshopapi.lukakordic.me/uploads/images-1697553719708-418143471.jpg",
-      isLoading: true,
-    },
-    {
-      url: "http://parkandshopapi.lukakordic.me/uploads/images-1697553719937-911117851.jpg",
-      isLoading: true,
-    },
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
   ]);
-
-  // Function to handle image load
-  const handleImageLoad = (index) => {
-    const newImages = [...images];
-    newImages[index].isLoading = false;
-    setImages(newImages);
-  };
-
   return (
     <div className="page gallery">
+      {" "}
       <div className="gallery-top">
         <div className="gallery-top-header">
           <Link to="/blogs">
@@ -50,30 +33,17 @@ const Gallery = () => {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
               />
             </svg>
-            <span>Povratak</span>
+            <span>Povratak</span>{" "}
           </Link>
           <h1>Galerija</h1>
         </div>
       </div>
       <div className="gallery-content">
         {images.map((image, index) => (
-          <div
-            className={
-              image.isLoading
-                ? "gallery-content-image loading"
-                : "gallery-content-image"
-            }
-          >
-            <img
-              src={image.url}
-              alt={`Image ${index}`}
-              loading="lazy"
-              onLoad={() => handleImageLoad(index)}
-            />
-          </div>
+          <img src={image} alt={`Gallery Image ${index}`} />
         ))}
       </div>
     </div>
