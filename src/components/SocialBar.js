@@ -20,11 +20,12 @@ const SocialBar = () => {
         <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
           <img src={facebookIcon} alt="Facebook" />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.instagram.com/comodo.bar"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={instagramIcon} alt="Instagram" />
-        </a>
-        <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-          <img src={twitterIcon} alt="Twitter" />
         </a>
       </div>
     </div>
