@@ -1,10 +1,12 @@
 @import "../App.scss";
 
-.blog {
+.drink-page {
+  width: 100%;
+  height: 92.5vh;
   @include flex(column, flex-start, flex-start);
-  height: 85.5vh;
+  overflow: hidden;
 
-  .blog-top {
+  .drink-top {
     background-color: $white;
     padding: 1rem;
     @include flex(column, flex-start, flex-start);
@@ -13,7 +15,7 @@
     border-bottom: 1px solid $gray-6;
     height: 6.5vh;
 
-    .blog-top-header {
+    .drink-top-header {
       @include flex(row, center, center);
       width: 100%;
       position: relative;
@@ -99,12 +101,12 @@
     }
   }
 
-  .blog-content {
+  .drink-content {
     @include flex(column, flex-start, flex-start);
     gap: 0.2rem;
-    height: 79vh;
+    height: calc(100% - 6.5vh);
 
-    .blog-content-image {
+    .drink-content-image {
       width: 100%;
       aspect-ratio: 1/1;
       overflow: hidden;
@@ -116,7 +118,7 @@
         z-index: 0;
       }
 
-      .blog-content-image-arrow-button {
+      .drink-content-image-arrow-button {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -145,27 +147,34 @@
       }
     }
 
-    .blog-content-text {
-      padding: 1rem;
+    .drink-content-text {
+      padding: 1.5rem;
       @include flex(column, flex-start, flex-start);
       gap: 1rem;
       width: 100%;
+      position: relative;
 
       h1 {
         color: $black;
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 700;
       }
 
-      .blog-content-text-date {
+      h4 {
+        color: $black;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .drink-content-text-date {
         @include flex(row, flex-start, center);
         gap: 0.5rem;
         width: 100%;
 
         span {
           color: $black;
-          font-size: 0.95rem;
-          font-weight: 500;
+          font-size: 1rem;
+          font-weight: 600;
         }
       }
     }
