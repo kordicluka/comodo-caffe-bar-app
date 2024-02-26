@@ -13,7 +13,7 @@ const AppLoading = () => {
   }, []);
 
   if (!loading) {
-    window.location.href = "/menu";
+    window.location.href = "/home";
   }
   return (
     <div

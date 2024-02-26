@@ -415,7 +415,11 @@ const Menu = () => {
         {drinks.map((drink, index) => {
           if (checkSearch(drink.title) && checkDrinkFilter(drink)) {
             return (
-              <Link key={index} className="menu-container-drink">
+              <Link
+                key={index}
+                className="menu-container-drink"
+                to={`/menu/${drink.id}`}
+              >
                 <div className="menu-container-drink-image">
                   <img src={drink.image} alt={drink.title} />
                 </div>
@@ -424,7 +428,7 @@ const Menu = () => {
                   <span>{drink.category[1]} </span>
                 </div>
                 <div className="menu-container-drink-price">
-                  <span>{drink.price} €</span>
+                  <span>{drink.price}0 €</span>
                 </div>
               </Link>
             );
