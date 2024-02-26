@@ -333,6 +333,14 @@ const Menu = () => {
   ]);
   const [activeCategory, setActiveCategory] = useState(categories[0].title);
 
+  const checkSearch = (title) => {
+    if (title.toLowerCase().includes(search.toLowerCase())) {
+      return true;
+    }
+
+    return false;
+  };
+
   return (
     <div className="page menu">
       <div className="menu-top">
@@ -390,6 +398,22 @@ const Menu = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="menu-container">
+        {drinks.map((drink, index) => (
+          <Link key={index} className="menu-container-drink">
+            <div className="menu-container-drink-image">
+              <img src={drink.image} alt={drink.title} />
+            </div>
+            <div className="menu-container-drink-text">
+              <h1>{drink.title}</h1>
+              <span>{drink.category} </span>
+            </div>
+            <div className="menu-container-drink-price">
+              <span>{drink.price} €</span>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
