@@ -21,7 +21,7 @@ const Gallery = () => {
       {" "}
       <div className="gallery-top">
         <div className="gallery-top-header">
-          <Link to="/blogs">
+          <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

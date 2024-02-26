@@ -107,7 +107,7 @@ const Blogs = () => {
     <div className="page blogs">
       <div className="blogs-top">
         <div className="blogs-top-header">
-          <Link to="/blogs">
+          <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
