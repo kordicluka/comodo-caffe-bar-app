@@ -9,7 +9,7 @@ const Menu = () => {
       id: 1,
       title: "Coca Cola",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://assets.turbologo.com/blog/en/2019/08/19085106/coca-cola-logo-2007.jpg",
     },
@@ -17,7 +17,7 @@ const Menu = () => {
       id: 2,
       title: "Coca Cola Zero",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010560/cola_zero_qs3okx.webp",
     },
@@ -25,7 +25,7 @@ const Menu = () => {
       id: 3,
       title: "Cedevita",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010560/cedevita_lkl5ap.jpg",
     },
@@ -33,7 +33,7 @@ const Menu = () => {
       id: 4,
       title: "Limonada",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/limunada_vlkuhv.jpg",
     },
@@ -41,7 +41,7 @@ const Menu = () => {
       id: 5,
       title: "Naranča",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/naranca_ro3efd.png",
     },
@@ -49,7 +49,7 @@ const Menu = () => {
       id: 6,
       title: "Pago",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/pago_logo_glow_umnptq.png",
     },
@@ -58,7 +58,7 @@ const Menu = () => {
       id: 1,
       title: "Coca Cola",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://assets.turbologo.com/blog/en/2019/08/19085106/coca-cola-logo-2007.jpg",
     },
@@ -66,7 +66,7 @@ const Menu = () => {
       id: 2,
       title: "Coca Cola Zero",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010560/cola_zero_qs3okx.webp",
     },
@@ -74,7 +74,7 @@ const Menu = () => {
       id: 3,
       title: "Cedevita",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010560/cedevita_lkl5ap.jpg",
     },
@@ -82,7 +82,7 @@ const Menu = () => {
       id: 4,
       title: "Limonada",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/limunada_vlkuhv.jpg",
     },
@@ -90,7 +90,7 @@ const Menu = () => {
       id: 5,
       title: "Naranča",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/naranca_ro3efd.png",
     },
@@ -98,7 +98,7 @@ const Menu = () => {
       id: 6,
       title: "Pago",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/pago_logo_glow_umnptq.png",
     },
@@ -106,7 +106,7 @@ const Menu = () => {
       id: 1,
       title: "Coca Cola",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://assets.turbologo.com/blog/en/2019/08/19085106/coca-cola-logo-2007.jpg",
     },
@@ -114,7 +114,7 @@ const Menu = () => {
       id: 2,
       title: "Coca Cola Zero",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010560/cola_zero_qs3okx.webp",
     },
@@ -122,7 +122,7 @@ const Menu = () => {
       id: 3,
       title: "Cedevita",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010560/cedevita_lkl5ap.jpg",
     },
@@ -130,7 +130,7 @@ const Menu = () => {
       id: 4,
       title: "Limonada",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/limunada_vlkuhv.jpg",
     },
@@ -138,7 +138,7 @@ const Menu = () => {
       id: 5,
       title: "Naranča",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/naranca_ro3efd.png",
     },
@@ -146,7 +146,7 @@ const Menu = () => {
       id: 6,
       title: "Pago",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/pago_logo_glow_umnptq.png",
     },
@@ -154,7 +154,7 @@ const Menu = () => {
       id: 7,
       title: "Schweppes Tonic",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/schweppes_tonic_ac11sz.jpg",
     },
@@ -162,7 +162,7 @@ const Menu = () => {
       id: 8,
       title: "Schweppes Bitter Lemon",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010562/schwpees_bitter_lemon_e29kv9.webp",
     },
@@ -170,7 +170,7 @@ const Menu = () => {
       id: 9,
       title: "Tangerine Juice",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010562/tangerine_wijc2n.jpg",
     },
@@ -178,7 +178,7 @@ const Menu = () => {
       id: 10,
       title: "Thomas Henry",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/thoma_henry_yb6mhv.webp",
     },
@@ -187,7 +187,7 @@ const Menu = () => {
       id: 1,
       title: "Coca Cola",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://assets.turbologo.com/blog/en/2019/08/19085106/coca-cola-logo-2007.jpg",
     },
@@ -195,7 +195,7 @@ const Menu = () => {
       id: 2,
       title: "Coca Cola Zero",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010560/cola_zero_qs3okx.webp",
     },
@@ -203,7 +203,7 @@ const Menu = () => {
       id: 3,
       title: "Cedevita",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010560/cedevita_lkl5ap.jpg",
     },
@@ -211,7 +211,7 @@ const Menu = () => {
       id: 4,
       title: "Limonada",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/limunada_vlkuhv.jpg",
     },
@@ -219,7 +219,7 @@ const Menu = () => {
       id: 5,
       title: "Naranča",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/naranca_ro3efd.png",
     },
@@ -227,7 +227,7 @@ const Menu = () => {
       id: 6,
       title: "Pago",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/pago_logo_glow_umnptq.png",
     },
@@ -235,7 +235,7 @@ const Menu = () => {
       id: 7,
       title: "Schweppes Tonic",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/schweppes_tonic_ac11sz.jpg",
     },
@@ -243,7 +243,7 @@ const Menu = () => {
       id: 8,
       title: "Schweppes Bitter Lemon",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010562/schwpees_bitter_lemon_e29kv9.webp",
     },
@@ -251,7 +251,7 @@ const Menu = () => {
       id: 9,
       title: "Tangerine Juice",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010562/tangerine_wijc2n.jpg",
     },
@@ -259,7 +259,7 @@ const Menu = () => {
       id: 10,
       title: "Thomas Henry",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/thoma_henry_yb6mhv.webp",
     },
@@ -267,7 +267,7 @@ const Menu = () => {
       id: 11,
       title: "Pago",
       price: 2.5,
-      category: ["all", "juices"],
+      category: ["Sva pića", "Sokovi"],
       image:
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708010561/pago_logo_glow_umnptq.png",
     },
@@ -275,7 +275,7 @@ const Menu = () => {
       id: 12,
       title: "Espresso",
       price: 1.6,
-      category: ["all", "coffee"],
+      category: ["Sva pića", "Topli napitci"],
       image:
         "https://images.getrecipekit.com/20230414194230-espresso-cup-with-coffee-beans.jpg?aspect_ratio=16:9&quality=90&",
     },
@@ -293,7 +293,7 @@ const Menu = () => {
       image:
         "https://www.poslovni.hr/wp-content/uploads/2022/12/louis-hansel-vD9gZXbmRP4-unsplash.jpg",
       shortDescription: "Espresso, Macchiato, Cappuccino, Latte...",
-      id: "coffee",
+      id: "Topli napitci",
     },
 
     {
@@ -301,7 +301,7 @@ const Menu = () => {
       image:
         "https://www.arz.hr/wp-content/uploads/2022/04/prirodni-sokovi--kako-ih-napraviti-scaled.jpg",
       shortDescription: "Naranča, Jabuka, Ananas, Borovnica...",
-      id: "juices",
+      id: "Sokovi",
     },
 
     {
@@ -335,6 +335,18 @@ const Menu = () => {
 
   const checkSearch = (title) => {
     if (title.toLowerCase().includes(search.toLowerCase())) {
+      return true;
+    }
+
+    return false;
+  };
+
+  const checkDrinkFilter = (drink) => {
+    if (activeCategory === "Sva pića") {
+      return true;
+    }
+
+    if (drink.category.includes(activeCategory)) {
       return true;
     }
 
@@ -400,20 +412,24 @@ const Menu = () => {
         </div>
       </div>
       <div className="menu-container">
-        {drinks.map((drink, index) => (
-          <Link key={index} className="menu-container-drink">
-            <div className="menu-container-drink-image">
-              <img src={drink.image} alt={drink.title} />
-            </div>
-            <div className="menu-container-drink-text">
-              <h1>{drink.title}</h1>
-              <span>{drink.category} </span>
-            </div>
-            <div className="menu-container-drink-price">
-              <span>{drink.price} €</span>
-            </div>
-          </Link>
-        ))}
+        {drinks.map((drink, index) => {
+          if (checkSearch(drink.title) && checkDrinkFilter(drink)) {
+            return (
+              <Link key={index} className="menu-container-drink">
+                <div className="menu-container-drink-image">
+                  <img src={drink.image} alt={drink.title} />
+                </div>
+                <div className="menu-container-drink-text">
+                  <h1>{drink.title}</h1>
+                  <span>{drink.category[1]} </span>
+                </div>
+                <div className="menu-container-drink-price">
+                  <span>{drink.price} €</span>
+                </div>
+              </Link>
+            );
+          }
+        })}
       </div>
     </div>
   );
