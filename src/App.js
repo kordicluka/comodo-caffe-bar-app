@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import NotFound from "./pages/NotFound";
-import Category from "./pages/Category";
 import Drink from "./pages/Drink";
 import Gallery from "./pages/Gallery";
 import Blogs from "./pages/Blogs";
@@ -23,9 +22,7 @@ function App() {
           <Route path="/" element={<AppLoading />} />
           <Route path="/home" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/menu/:category" element={<Category />} />
           <Route path="/menu/:drink" element={<Drink />} />
-          <Route path="/menu/:category/:drink" element={<Drink />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="blogs/:slug" element={<Blog />} />
