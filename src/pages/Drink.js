@@ -128,7 +128,7 @@ const Drink = () => {
     <div className="page drink-page">
       <div className="drink-top">
         <div className="drink-top-header">
-          <Link to="/home">
+          <Link to="/menu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

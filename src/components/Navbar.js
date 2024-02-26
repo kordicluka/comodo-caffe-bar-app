@@ -9,7 +9,7 @@ import homeIcon from "../assets/icons/home.svg";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <NavLink className="navbar-link" to="/home">
+      <NavLink className="navbar-link" to="/">
         <img src={homeIcon} alt="Home" />
         <span>Home</span>
       </NavLink>
