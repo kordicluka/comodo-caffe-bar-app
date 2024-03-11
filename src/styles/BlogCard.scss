@@ -5,11 +5,21 @@
   position: relative;
   width: 100%;
   text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid $gray-15;
+
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
 
   .image-container {
     width: 100%;
     aspect-ratio: 1/1;
     overflow: hidden;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+
     img {
       width: 100%;
       height: 100%;
@@ -18,17 +28,14 @@
   }
 
   .content {
-    padding: 1rem;
+    padding: 1rem 0.3rem;
     @include flex(column, flex-start, flex-start);
     gap: 0.7rem;
-    background-color: transparent;
-    transform: translateY(-2rem);
-    width: 80%;
-    height: 13vh;
+    width: 100%;
     h4 {
-      color: $gray-13;
-      font-size: 1.2rem;
-      font-weight: 700;
+      color: $white;
+      font-size: 1.3rem;
+      font-weight: 500;
 
       span {
         color: $gray-14;
@@ -36,20 +43,24 @@
     }
 
     p {
-      color: $gray-13;
+      color: $gray-5;
       font-size: 0.9rem;
-      font-weight: 400;
+      font-weight: 300;
     }
 
     .blog-card-content-date {
       @include flex(row, flex-start, center);
       gap: 0.5rem;
-      width: 100%;
+      padding: 0.4rem 0.7rem;
+      background-color: $gray-15;
+      border-radius: 0.7rem;
+      transform: translateX(-0.4rem);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 
       span {
-        color: $black;
-        font-size: 0.9rem;
-        font-weight: 500;
+        color: $gray-1;
+        font-size: 0.8rem;
+        font-weight: 400;
       }
     }
   }

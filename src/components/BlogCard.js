@@ -9,7 +9,7 @@ const BlogCard = ({ blog, index, searchTitle }) => {
         <img src={blog.images[0]} alt={blog.title} />
       </div>
       <div className="content">
-        {searchTitle(blog.title)} <p>{blog.shortDescription}</p>
+        {" "}
         <div className="blog-card-content-date">
           {blog.dateStart === blog.dateEnd ? (
             <span>{blog.dateStart}</span>
@@ -19,6 +19,7 @@ const BlogCard = ({ blog, index, searchTitle }) => {
             </span>
           )}
         </div>
+        {searchTitle(blog.title)} <p>{blog.shortDescription}</p>
       </div>
     </Link>
   );
