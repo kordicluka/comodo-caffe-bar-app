@@ -8,6 +8,8 @@
     @include flex(column, flex-start, flex-start);
     gap: 1rem;
     width: 100%;
+    border-bottom: 1px solid $gray-12;
+    z-index: 2;
 
     .blogs-top-header {
       @include flex(row, center, center);
@@ -40,17 +42,18 @@
 
       h1 {
         color: $white;
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 1.6rem;
+        font-weight: 400;
         transform: translateX(-0.4rem);
+        text-transform: uppercase;
       }
     }
 
     .search-bar {
-      background-color: rgba($color: $white, $alpha: 0.3);
-      border: 0.12rem solid rgba($color: $white, $alpha: 0.3);
+      background-color: rgba($color: $white, $alpha: 0.1);
+      border: 0.12rem solid rgba($color: $white, $alpha: 0.1);
       @include flex(row, center, center);
-      border-radius: 0.1rem;
+      border-radius: 0.3rem;
       gap: 0.5rem;
       width: 100%;
       height: 2.4rem;
