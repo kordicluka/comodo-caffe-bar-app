@@ -21,17 +21,17 @@
     padding: 1rem;
     @include flex(column, flex-start, flex-start);
     gap: 0.7rem;
-    background-color: $white;
+    background-color: transparent;
     transform: translateY(-2rem);
     width: 80%;
     height: 13vh;
     h4 {
-      color: $black;
+      color: $gray-13;
       font-size: 1.2rem;
       font-weight: 700;
 
       span {
-        color: $secondary-color;
+        color: $gray-14;
       }
     }
 

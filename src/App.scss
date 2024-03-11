@@ -17,10 +17,7 @@ $gray-14: #1f1f1f;
 $gray-15: #141414;
 $gray-16: #0a0a0a;
 $gray-17: #000;
-$background-color: $gray-15;
-$stroke-color: $gray-12;
-$primary-color: #1e272a;
-$secondary-color: #cfb000;
+
 * {
   box-sizing: border-box;
   justify-content: center;
@@ -33,12 +30,12 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $black;
+  color: $white;
   width: 100vw;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: $white;
+  background-color: $gray-16;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
