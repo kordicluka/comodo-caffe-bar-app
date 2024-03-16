@@ -67,6 +67,7 @@
     @include flex(column, flex-start, flex-start);
     gap: 0.2rem;
     height: calc(100% - 6.5vh);
+    width: 100%;
 
     .drink-content-image {
       width: 100%;
@@ -122,6 +123,24 @@
         font-weight: 700;
       }
 
+      .prices {
+        @include flex(column, flex-start, flex-start);
+        gap: 0.5rem;
+        width: 100%;
+
+        .price {
+          @include flex(row, flex-end, flex-end);
+          gap: 0.5rem;
+
+          h5 {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: $gray-3;
+          }
+        }
+      }
+
       h4 {
         color: $gray-3;
         font-size: 1rem;
@@ -131,7 +150,7 @@
       p {
         color: $gray-4;
         font-size: 0.9rem;
-        font-weight: 400;
+        font-weight: 300;
       }
 
       .drink-content-text-date {
