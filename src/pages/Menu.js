@@ -93,43 +93,6 @@ const Menu = () => {
       </div>
       <div className="menu-container">
         {elements
-          ?.filter(
-            (element) =>
-              checkSearch(element?.title) && checkDrinkFilter(element)
-          )
-          .sort((a, b) => a?.layoutNumber - b?.layoutNumber)
-          .map((element, index) => {
-            if (element?.type === "drink") {
-              if (element?.prices?.length !== 0) {
-                return (
-                  <Link
-                    key={`${element._id}`} // Creating a composite key.
-                    className="menu-container-drink"
-                    to={`/menu/${element.id}`}
-                  >
-                    <div className="menu-container-drink-image">
-                      <img src={element.image?.url} alt={element?.title} />
-                    </div>
-                    <div className="menu-container-drink-text">
-                      <h1>{element?.title}</h1>
-                      <span>
-                        {
-                          categories.find(
-                            (category) => category._id === element?.category[0]
-                          )?.title
-                        }
-                      </span>
-                    </div>
-                    <div className="menu-container-drink-price">
-                      <span>{element?.prices[0]?.price}0 €</span>
-                    </div>
-                  </Link>
-                );
-              }
-            }
-          })}
-
-        {elements
           ?.filter((element) => element.category.includes(activeCategory))
           .sort((a, b) => a.layoutNumber - b.layoutNumber)
           .map((element, index) => {
@@ -160,10 +123,35 @@ const Menu = () => {
                     </span>
                   </div>
                   <div className="menu-container-drink-price">
-                    <span>{price?.price}0 €</span>
+                    <span>{price?.price.toFixed(2)} €</span>
                   </div>
                 </Link>
               ));
+            } else {
+              return (
+                <Link
+                  key={`${element._id}`} // Creating a composite key.
+                  className="menu-container-drink"
+                  to={`/menu/${element.id}`}
+                >
+                  <div className="menu-container-drink-image">
+                    <img src={element.image?.url} alt={element?.title} />
+                  </div>
+                  <div className="menu-container-drink-text">
+                    <h1>{element?.title}</h1>
+                    <span>
+                      {
+                        categories.find(
+                          (category) => category._id === element?.category[0]
+                        )?.title
+                      }
+                    </span>
+                  </div>
+                  <div className="menu-container-drink-price">
+                    <span>{element?.price.toFixed(2)} €</span>
+                  </div>
+                </Link>
+              );
             }
           })}
       </div>
