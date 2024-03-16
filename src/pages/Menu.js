@@ -21,18 +21,6 @@ const Menu = () => {
     return false;
   };
 
-  const checkDrinkFilter = (drink) => {
-    if (activeCategory === "Sva pića") {
-      return true;
-    }
-
-    if (drink.category.includes(activeCategory)) {
-      return true;
-    }
-
-    return false;
-  };
-
   return (
     <div className="page menu">
       <div className="menu-top">
@@ -93,15 +81,22 @@ const Menu = () => {
       </div>
       <div className="menu-container">
         {elements
-          ?.filter((element) => element.category.includes(activeCategory))
+          .filter((element) => {
+            if (checkSearch(element.title)) {
+              if (element?.category?.includes(activeCategory)) {
+                return true;
+              }
+            }
+            return false;
+          })
           .sort((a, b) => a.layoutNumber - b.layoutNumber)
           .map((element, index) => {
             if (element.type === "drink") {
               return element.prices.map((price, priceIndex) => (
                 <Link
-                  key={`${element._id}`} // Creating a composite key.
+                  key={`${element._id}-${priceIndex}`} // Ensuring a unique key by combining the element ID and price index.
                   className="menu-container-drink"
-                  to={`/menu/${element.id}`}
+                  to={`/menu/${element._id}`}
                 >
                   <div className="menu-container-drink-image">
                     <img src={element.image?.url} alt={element?.title} />
@@ -132,7 +127,7 @@ const Menu = () => {
                 <Link
                   key={`${element._id}`} // Creating a composite key.
                   className="menu-container-drink"
-                  to={`/menu/${element.id}`}
+                  to={`/menu/${element._id}`}
                 >
                   <div className="menu-container-drink-image">
                     <img src={element.image?.url} alt={element?.title} />
