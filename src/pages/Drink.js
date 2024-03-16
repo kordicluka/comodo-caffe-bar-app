@@ -4,7 +4,7 @@ import "../styles/Drink.scss";
 import { AppContext } from "../AppContext";
 
 const Drink = () => {
-  const { drinks } = useContext(AppContext);
+  const { drinks, drinksCombinations } = useContext(AppContext);
 
   //get the id from the url params
   const url = window.location.href;
@@ -17,23 +17,22 @@ const Drink = () => {
   }, [urlParts]);
 
   const [drink, setDrink] = useState(null);
+  const [drinkCombinationOrDrink, setDrinkCombinationOrDrink] = useState(null);
 
   useEffect(() => {
-    const drink = drinks.find((drink) => drink._id === urlParts[4]);
-    setDrink(drink);
-  }, [id, drinks]);
+    const d = drinks.find((drink) => drink._id === urlParts[4]);
 
-  const getPricesJSX = () => {
-    return drink?.prices?.map((price) => {
-      return (
-        <div className="price" key={price._id}>
-          {" "}
-          <h4>{price.price}0 €</h4>
-          <h5>{price.subtraction + " " + drink?.unitSubtraction}</h5>
-        </div>
+    if (d) {
+      setDrink(d);
+      setDrinkCombinationOrDrink("drink");
+    } else {
+      const drinkCombination = drinksCombinations.find(
+        (drinkCombination) => drinkCombination._id === urlParts[4]
       );
-    });
-  };
+      setDrinkCombinationOrDrink("drinkCombination");
+      setDrink(drinkCombination);
+    }
+  }, [id, drinks]);
 
   return (
     <div className="page drink-page">
@@ -65,7 +64,33 @@ const Drink = () => {
         </div>
         <div className="drink-content-text">
           <h1>{drink?.title}</h1>
-          <div className="prices">{getPricesJSX()}</div>
+          <div className="prices">
+            {drinkCombinationOrDrink === "drinkCombination" && (
+              <div className="price">
+                <h4>{drink?.price.toFixed(2)} €</h4>
+              </div>
+            )}
+
+            {drink?.prices?.map((price) => {
+              let displaySubtraction;
+              if (
+                (price.subtraction === 0.06 &&
+                  drink?.unitSubtraction === "kg") ||
+                drink?.unitSubtraction === "komad"
+              ) {
+                displaySubtraction = "";
+              } else {
+                displaySubtraction = `${price.subtraction} ${drink?.unitSubtraction}`;
+              }
+              return (
+                <div className="price" key={price._id}>
+                  {" "}
+                  <h4>{price.price.toFixed(2)} €</h4>
+                  <h5>{displaySubtraction}</h5>
+                </div>
+              );
+            })}
+          </div>
           <p>{drink?.description}</p>
         </div>
       </div>
