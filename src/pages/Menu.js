@@ -4,9 +4,102 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../AppContext";
 
 const Menu = () => {
-  const { drinks, categories, elements } = useContext(AppContext);
+  const {
+    drinks,
+    categories,
+    elements,
+    setDrinksCombinations,
+    drinksCombinations,
+    setElements,
+    setDrinks,
+    setCategories,
+  } = useContext(AppContext);
 
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    fetchDrinks();
+    fetchCategories();
+    fetchDrinksCombinations();
+  }, []);
+
+  const fetchDrinksCombinations = () => {
+    const token = localStorage.getItem("token");
+    fetch("https://cash-registar-server.vercel.app/api/drinkCombination", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setDrinksCombinations(data);
+      })
+      .catch((error) => {
+        fetchDrinksCombinations();
+      });
+  };
+
+  useEffect(() => {
+    // add to Elements all drinks but with type drink
+    const drinksWithCategory = drinks.map((drink) => ({
+      ...drink,
+      type: "drink",
+    }));
+
+    // add to Elements all drinkCombinations but with type drinkCombination
+    const drinkCombinationsWithCategory = drinksCombinations.map(
+      (drinkCombination) => ({
+        ...drinkCombination,
+        type: "drinkCombination",
+      })
+    );
+
+    // merge all arrays
+    const allElements = [
+      ...drinksWithCategory,
+      ...drinkCombinationsWithCategory,
+    ];
+
+    setElements(allElements);
+  }, [drinks, drinksCombinations]);
+
+  const fetchDrinks = () => {
+    const token = localStorage.getItem("token");
+    fetch("https://cash-registar-server.vercel.app/api/drink", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setDrinks(data);
+      })
+      .catch((error) => {
+        fetchDrinks();
+      });
+  };
+
+  const fetchCategories = () => {
+    const token = localStorage.getItem("token");
+    fetch("https://cash-registar-server.vercel.app/api/category", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCategories(data);
+      })
+      .catch((error) => {
+        fetchCategories();
+      });
+  };
 
   const [activeCategory, setActiveCategory] = useState();
   useEffect(() => {
@@ -25,7 +118,7 @@ const Menu = () => {
     <div className="page menu">
       <div className="menu-top">
         <div className="menu-top-header">
-          <Link to="/blogs">
+          <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

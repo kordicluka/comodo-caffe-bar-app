@@ -11,8 +11,6 @@ import Blog from "./pages/Blog";
 import SocialBar from "./components/SocialBar";
 import { AppProvider } from "./AppContext";
 
-// create app context
-
 function App() {
   return (
     <>

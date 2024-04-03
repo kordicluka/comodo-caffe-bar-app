@@ -6,74 +6,17 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   const [blogs, setBlogs] = useState([
     {
-      title: "Najava kviza Bitange i Princeze 29.2.2024.",
-      shortDescription: "Kliknite za prijavu na kviz!",
+      title: "Kvizovi u Comodo Bar-u - Opći. Dođite i zabavite se!",
+      shortDescription: "Pogledajte kako izgleda kviz u Comodo Bar-u.",
       content: "<p>This is the content for blog 1</p>",
-      dateStart: "15.02.2024.",
-      dateEnd: "15.02.2024.",
-      images: [
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708798122/Screenshot_2024-02-24_190751_tlwv1m.png",
-      ],
-      slug: "najava-kviza-25-2-2024",
-    },
-    {
-      title: "Održan kviz  18.2.2024. u Comodo Bar-u.",
-      shortDescription: "Pogledajte kako je bilo na kvizu!",
-      content: "<p>This is the content for blog 1</p>",
-      dateStart: "15.02.2024.",
-      dateEnd: "15.02.2024.",
+      dateStart: "Svake srijede",
+      dateEnd: "20:00h",
       images: [
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_5_yvcfsy.jpg",
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_3_ak4juq.jpg",
         "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_4_cmtkt4.jpg",
       ],
-      slug: "odrzan-kviz-bitangi-i-princeza-18-2-2024",
-    },
-    {
-      title: "Inquizicija kviz 15.2.2024. u Comodo Bar-u.",
-      shortDescription: "Kliknite za prijavu na kviz!",
-      content: "<p>This is the content for blog 2</p>",
-      dateStart: "15.02.2024.",
-      dateEnd: "15.02.2024.",
-      images: [
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_4_cmtkt4.jpg",
-      ],
-      slug: "inquizicija-kviz-15-2-2024",
-    },
-    {
-      title: "Proslava rođendana u Comodo Bar-u.",
-      shortDescription:
-        "Pogledajte kako izgleada proslava rođendana u Comodo Bar-u!",
-      content: "<p>This is the content for blog 3</p>",
-      dateStart: "15.02.2024.",
-      dateEnd: "15.02.2024.",
-      images: [
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_1_ltmhrq.jpg",
-      ],
-      slug: "proslava-rodendana-2-11-2024",
-    },
-    {
-      title: "Inquizicija kviz 15.2.2024. u Comodo Bar-u.",
-      shortDescription: "Kliknite za prijavu na kviz!",
-      content: "<p>This is the content for blog 2</p>",
-      dateStart: "15.02.2024.",
-      dateEnd: "15.02.2024.",
-      images: [
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_2_xn3abu.jpg",
-      ],
-      slug: "inquizicija-kviz-15-2-2024",
-    },
-    {
-      title: "Proslava rođendana u Comodo Bar-u.",
-      shortDescription:
-        "Pogledajte kako izgleada proslava rođendana u Comodo Bar-u!",
-      content: "<p>This is the content for blog 3</p>",
-      dateStart: "15.02.2024.",
-      dateEnd: "15.02.2024.",
-      images: [
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_abflwn.jpg",
-      ],
-      slug: "proslava-rodendana-2-11-2024",
+      slug: "kvizovi-u-comodo-bar-u",
     },
   ]);
   const [activeImage, setActiveImage] = useState(0);
