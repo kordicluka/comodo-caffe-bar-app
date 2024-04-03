@@ -194,7 +194,7 @@ const Menu = () => {
                 <Link
                   key={`${element._id}-${priceIndex}`} // Ensuring a unique key by combining the element ID and price index.
                   className="menu-container-drink"
-                  to={`/menu/${element._id}`}
+                  to={`/menu/${activeCategory}/${element._id}`}
                 >
                   <div className="menu-container-drink-image">
                     <img src={element.image?.url} alt={element?.title} />

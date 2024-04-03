@@ -20,7 +20,7 @@ const Drink = () => {
   const [drinkCombinationOrDrink, setDrinkCombinationOrDrink] = useState(null);
 
   useEffect(() => {
-    const d = drinks.find((drink) => drink._id === urlParts[4]);
+    const d = drinks.find((drink) => drink._id === urlParts[5]);
 
     if (d) {
       setDrink(d);
