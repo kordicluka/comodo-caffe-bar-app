@@ -17,6 +17,10 @@ const Menu = () => {
 
   const [search, setSearch] = useState("");
 
+  //get the id from the url params
+  const url = window.location.href;
+  const urlParts = url.split("/");
+
   useEffect(() => {
     fetchDrinks();
     fetchCategories();
@@ -102,9 +106,10 @@ const Menu = () => {
   };
 
   const [activeCategory, setActiveCategory] = useState();
+
   useEffect(() => {
-    setActiveCategory(categories[0]?._id);
-  }, [categories]);
+    setActiveCategory(urlParts[4]);
+  }, []);
 
   const checkSearch = (title) => {
     if (title?.toLowerCase().includes(search.toLowerCase())) {
@@ -220,7 +225,7 @@ const Menu = () => {
                 <Link
                   key={`${element._id}`} // Creating a composite key.
                   className="menu-container-drink"
-                  to={`/menu/${element._id}`}
+                  to={`/menu/${activeCategory}/${element._id}`}
                 >
                   <div className="menu-container-drink-image">
                     <img src={element.image?.url} alt={element?.title} />

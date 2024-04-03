@@ -10,8 +10,12 @@
     gap: 1rem;
     width: 100%;
     padding-bottom: 0.5rem;
-    height: 21vh;
+    height: 20vh;
     border-bottom: 1px solid $gray-12;
+
+    @media (max-width: 380px) {
+      height: 27vh;
+    }
 
     .menu-top-header {
       @include flex(row, center, center);
