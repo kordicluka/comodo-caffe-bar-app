@@ -21,7 +21,8 @@ const Gallery = () => {
       {" "}
       <div className="gallery-top">
         <div className="gallery-top-header">
-          <Link to="/">
+          <a onClick={() => window.history.back()}>
+            {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -37,7 +38,7 @@ const Gallery = () => {
               />
             </svg>
             <span>Povratak</span>{" "}
-          </Link>
+          </a>
           <h1>Galerija</h1>
         </div>
       </div>

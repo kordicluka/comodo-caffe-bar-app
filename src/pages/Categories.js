@@ -160,17 +160,25 @@ const Categories = () => {
         </div>
       </div>
       <div className="categories-container">
-        {categories.map((category) => (
-          <Link to={`/menu/${category._id}`} className="c" key={category._id}>
-            <div className="back">
-              <img src={category.image.url} alt={category.title} />
-            </div>
-            <div className="menu-categories-info">
-              <h2>{category.title}</h2>
-              <p>{category.shortDescription}</p>
-            </div>
-          </Link>
-        ))}
+        {categories.map((category) => {
+          if (checkSearch(category.title)) {
+            return (
+              <Link
+                to={`/menu/${category._id}`}
+                className="c"
+                key={category._id}
+              >
+                <div className="back">
+                  <img src={category.image.url} alt={category.title} />
+                </div>
+                <div className="menu-categories-info">
+                  <h2>{category.title}</h2>
+                  <p>{category.shortDescription}</p>
+                </div>
+              </Link>
+            );
+          }
+        })}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import "../styles/Menu.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../AppContext";
 
 const Menu = () => {
@@ -14,6 +14,8 @@ const Menu = () => {
     setDrinks,
     setCategories,
   } = useContext(AppContext);
+
+  const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
 
@@ -123,7 +125,8 @@ const Menu = () => {
     <div className="page menu">
       <div className="menu-top">
         <div className="menu-top-header">
-          <Link to="/">
+          <a onClick={() => window.history.back()}>
+            {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -139,7 +142,7 @@ const Menu = () => {
               />
             </svg>
             <span>Povratak</span>{" "}
-          </Link>
+          </a>
           <h1>Cjenik</h1>
         </div>
         <div className="search-bar">
@@ -169,7 +172,11 @@ const Menu = () => {
               <button
                 key={index}
                 className={category?._id === activeCategory ? "active" : ""}
-                onClick={() => setActiveCategory(category?._id)}
+                onClick={() => {
+                  setActiveCategory(category?._id);
+                  // navigate to the category
+                  navigate(`/menu/${category?._id}`);
+                }}
               >
                 <span> {category?.title}</span>
               </button>
