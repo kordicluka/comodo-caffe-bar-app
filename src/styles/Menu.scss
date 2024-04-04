@@ -104,12 +104,13 @@
 
       .menu-categories-container {
         @include flex(row, flex-start, center);
-        overflow-x: auto;
+        overflow-y: scroll;
         position: absolute;
         left: 0;
         width: 100%;
         padding-bottom: 0.6rem;
-
+        height: 100%;
+        overflow-y: hidden;
         //stye the x-axis scrollbar
         &::-webkit-scrollbar {
           height: 0.3rem;
