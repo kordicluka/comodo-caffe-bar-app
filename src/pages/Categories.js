@@ -2,6 +2,8 @@ import React, { useState, useContext, useEffect } from "react";
 import "../styles/Categories.scss";
 import { Link } from "react-router-dom";
 import { AppContext } from "../AppContext";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Categories = () => {
   const {
@@ -169,7 +171,14 @@ const Categories = () => {
                 key={category._id}
               >
                 <div className="back">
-                  <img src={category.image.url} alt={category.title} />
+                  <LazyLoadImage
+                    src={category.image.url}
+                    alt={category.title}
+                    effect="blur"
+                    width="100%"
+                    height="100%"
+                    objectFit="cover"
+                  />
                 </div>
                 <div className="menu-categories-info">
                   <h2>{category.title}</h2>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Drink.scss";
 import { AppContext } from "../AppContext";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Drink = () => {
   const { drinks, drinksCombinations } = useContext(AppContext);
@@ -60,7 +61,14 @@ const Drink = () => {
       <div className="drink-content">
         {" "}
         <div className="drink-content-image">
-          <img src={drink?.image?.url} alt={drink?.title} />
+          <LazyLoadImage
+            src={drink?.image?.url}
+            alt={drink?.title}
+            effect="blur"
+            fit="cover"
+            width="100%"
+            height="100%"
+          />
         </div>
         <div className="drink-content-text">
           <h1>{drink?.title}</h1>

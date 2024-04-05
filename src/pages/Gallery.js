@@ -7,6 +7,7 @@ import image2 from "../assets/images/gallery-2.jpg";
 import image3 from "../assets/images/gallery-3.jpg";
 import image4 from "../assets/images/gallery-4.jpg";
 import image5 from "../assets/images/gallery-5.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Gallery = () => {
   const [images, setImages] = useState([
@@ -44,7 +45,15 @@ const Gallery = () => {
       </div>
       <div className="gallery-content">
         {images.map((image, index) => (
-          <img src={image} alt={`Gallery Image ${index}`} />
+          <LazyLoadImage
+            src={image}
+            alt={`Gallery Image ${index}`}
+            key={index}
+            effect="blur"
+            fit="cover"
+            width="100%"
+            height="100%"
+          />
         ))}
       </div>
     </div>

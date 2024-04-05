@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import "../styles/Menu.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../AppContext";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Menu = () => {
   const {
@@ -204,7 +205,14 @@ const Menu = () => {
                   to={`/menu/${activeCategory}/${element._id}`}
                 >
                   <div className="menu-container-drink-image">
-                    <img src={element.image?.url} alt={element?.title} />
+                    <LazyLoadImage
+                      src={element.image?.url}
+                      alt={element?.title}
+                      effect="blur"
+                      fit="cover"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                   <div className="menu-container-drink-text">
                     <h1>
@@ -235,7 +243,14 @@ const Menu = () => {
                   to={`/menu/${activeCategory}/${element._id}`}
                 >
                   <div className="menu-container-drink-image">
-                    <img src={element.image?.url} alt={element?.title} />
+                    <LazyLoadImage
+                      src={element.image?.url}
+                      alt={element?.title}
+                      effect="blur"
+                      fit="cover"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                   <div className="menu-container-drink-text">
                     <h1>{element?.title}</h1>

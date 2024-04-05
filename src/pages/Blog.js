@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Blog.scss";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([
@@ -80,7 +81,14 @@ const Blog = () => {
           </div>
         </div>
         <div className="blog-content-image">
-          <img src={blog.images[activeImage]} alt={blog.title} />
+          <LazyLoadImage
+            src={blog.images[activeImage]}
+            alt={blog.title}
+            effect="blur"
+            fit="cover"
+            width="100%"
+            height="100%"
+          />
 
           {blog.images.length > 1 && (
             <>
