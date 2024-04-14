@@ -10,7 +10,13 @@ import image5 from "../assets/images/gallery-5.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Gallery = () => {
-  const [images, setImages] = useState([image1, image2]);
+  const [images, setImages] = useState([
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+  ]);
   return (
     <div className="page gallery">
       {" "}

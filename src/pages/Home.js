@@ -110,12 +110,7 @@ const Home = () => {
         <h1>Cjenik</h1>
       </Link>
       <Link to="/blogs">
-        <img
-          src={
-            "https://image.dnevnik.hr/media/images/996x562/Sep2023/62638012-pub-kviz.jpg"
-          }
-          alt="blog"
-        />
+        <img src={blogs} alt="blog" />
         <h1>Događanja</h1>
       </Link>
       <Link to="/gallery">
