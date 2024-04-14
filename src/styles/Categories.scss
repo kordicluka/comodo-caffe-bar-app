@@ -1,7 +1,7 @@
 @import "../App.scss";
 
 .categories {
-  height: 92.5vh;
+  height: 91vh;
   width: 100vw;
   position: relative;
   .menu-top {
@@ -21,7 +21,7 @@
     z-index: 2;
 
     @media (max-width: 391px) {
-      height: 13.5vh;
+      height: 18vh;
     }
 
     .menu-top-header {

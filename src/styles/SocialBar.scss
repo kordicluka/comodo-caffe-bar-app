@@ -12,6 +12,11 @@
   padding: 0 1rem;
   border-top: 1px solid $gray-13;
 
+  @media (max-width: 391px) {
+    height: 9vh;
+    bottom: 9vh;
+  }
+
   h4 {
     color: $white;
     font-size: 1rem;

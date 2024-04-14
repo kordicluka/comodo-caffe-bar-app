@@ -19,6 +19,18 @@ const Blogs = () => {
       ],
       slug: "kvizovi-u-comodo-bar-u",
     },
+    {
+      title: "Tamburaška večer - svaki petak",
+      shortDescription:
+        "Pogledajte kako izgleda tamburaška večer u Comodo Bar-u.",
+      content: "<p>This is the content for blog 1</p>",
+      dateStart: "Svakog petka",
+      dateEnd: "22:00h - 02:00h",
+      images: [
+        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1713080775/1080x1080_kcucca.png",
+      ],
+      slug: "tamburaska-vecer--svaki-petak",
+    },
   ]);
 
   const [search, setSearch] = useState("");
