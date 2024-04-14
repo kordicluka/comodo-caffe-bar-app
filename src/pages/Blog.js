@@ -8,8 +8,7 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([
     {
       title: "Tamburaška večer - svaki petak",
-      shortDescription:
-        "Pogledajte kako izgleda tamburaška večer u Comodo Bar-u.",
+      shortDescription: "Pogledajte kako izgleda tamburaška večer.",
       content: "<p>This is the content for blog 1</p>",
       dateStart: "Svakog petka",
       dateEnd: "22:00h - 02:00h",
@@ -19,15 +18,13 @@ const Blog = () => {
       slug: "tamburaska-vecer--svaki-petak",
     },
     {
-      title: "Kvizovi u Comodo Bar-u - Opći. Dođite i zabavite se!",
-      shortDescription: "Pogledajte kako izgleda kviz u Comodo Bar-u.",
+      title: "Kvizovi u - Opći. Dođite i zabavite se!",
+      shortDescription: "Pogledajte kako izgleda kviz kod nas",
       content: "<p>This is the content for blog 1</p>",
       dateStart: "Svake srijede",
       dateEnd: "20:00h",
       images: [
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_5_yvcfsy.jpg",
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_3_ak4juq.jpg",
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1708806996/unnamed_4_cmtkt4.jpg",
+        "https://image.dnevnik.hr/media/images/996x562/Sep2023/62638012-pub-kviz.jpg",
       ],
       slug: "kvizovi-u-comodo-bar-u",
     },
