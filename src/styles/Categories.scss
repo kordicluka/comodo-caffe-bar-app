@@ -1,9 +1,13 @@
 @import "../App.scss";
 
 .categories {
-  height: 91vh;
+  height: 92.5vh;
   width: 100vw;
   position: relative;
+
+  @media (max-width: 391px) {
+    height: 91vh;
+  }
   .menu-top {
     background-color: $gray-16;
     padding: 1rem;
