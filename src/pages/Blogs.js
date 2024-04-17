@@ -14,7 +14,7 @@ const Blogs = () => {
       dateStart: "Svakog petka",
       dateEnd: "22:00h - 02:00h",
       images: [
-        "https://res.cloudinary.com/dvg2o5azu/image/upload/v1713080775/1080x1080_kcucca.png",
+        "https://res.cloudinary.com/dmqufec5z/image/upload/v1713353376/1080x1080_wualig.png",
       ],
       slug: "tamburaska-vecer--svaki-petak",
     },
